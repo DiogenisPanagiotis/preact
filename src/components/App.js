@@ -12,13 +12,11 @@ export class App extends Component {
 		}
         return (
             <div class="app container" style={style}>
-        		<div class="jumbotron">
-	                <Router>
-	                    <Home path="/" />
-	                    <Profile path="/profile/:user" />
-	                    <Redirect default />
-	                </Router>
-	            </div>
+                <Router>
+                    <Home path="/" />
+                    <Profile path="/profile/:user" />
+                    <Redirect default />
+                </Router>
             </div>
         );
     }
