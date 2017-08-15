@@ -20,7 +20,8 @@ export function User (props) {
 		display: 'block',
 		marginLeft: 'auto',
 		marginRight: 'auto',
-		width: '200px'
+		width: '200px',
+		cursor: 'pointer'
 	};	
 	const userInfoStyle = {
 		marginTop: '40px'
