@@ -2,7 +2,7 @@
 
 ### Demo
 
-ttps://preact-lzvuijgdts.now.sh
+https://preact-lzvuijgdts.now.sh
 
 ### Setup
 
