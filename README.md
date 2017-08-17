@@ -1,7 +1,9 @@
 ### Preact using Github API
 
 ### Demo
-https://preact-njwjkozhzc.now.sh
+```
+https://preact-ebssuprbcr.now.sh
+```
 
 ### Setup
 

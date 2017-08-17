@@ -37,7 +37,7 @@ export default function Home () {
     		<div class="col-sm-5">
     			<div class="jumbotron">
     				<div style={inner}>
-    					<img style={github} height="200" width="200"src="./github.svg" alt=""/>
+    					<img style={github} height="200" width="200" src="./github.svg" alt=""/>
 			            <h5 style={githubText}> Enter a GitHub Username</h5>
 			            <input type="search"
 			            	placeholder="e.g. Diogenis"

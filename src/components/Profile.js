@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 
 import User from './User';
+import Redirect from './Error';
 
 export class Profile extends Component {
 	constructor(props) {
@@ -22,15 +23,24 @@ export class Profile extends Component {
         	})
         	.catch(err => console.error(err));
     }
-    render({}, { loading, user }) {
+    handlerRender(){
+    	if (this.state.loading){
+    		return <h5>Fetching...</h5>
+    	} else {
+	    	if (this.state.user.message){
+	    		return (
+	    			<Redirect/>
+	    		)
+	    	} else {
+	     		return (
+	    			<User image={this.state.user.avatar_url} name={this.state.user.name} />
+	    		)   		
+	    	}
+    	}
+    }
+    render({}, {}) {
         return (
-        	<div class="app">
-        	{loading
-                ? <p>Fetching...</p>
-                : <User image={user.avatar_url} name={user.name} />
-            }
-            </div>
-
+        	<div>{this.handlerRender()}</div>
         )
     }
 }
