@@ -1,26 +1,11 @@
 import { h } from 'preact';
 import {route} from 'preact-router';
-import ErrorStyle from './Error.css'
+import ErrorCSS from './Error.css';
 
 function handleClick(e){
 	route('/')
 }
 export default function Redirect () {
-	const style = {
-		display: 'block',
-		marginLeft: 'auto',
-		marginRight: 'auto',
-		textAlign: 'center',
-		marginBottom: '10px'
-	};
-	const svgStyle = {
-		display: 'block',
-		marginLeft: 'auto',
-		marginRight: 'auto',
-		marginBottom: '30px',
-		height: '180px',
-		width: '180px'
-	}
 	const buttonStyle = {
 		color: 'fff',
 		display: 'block',
@@ -29,17 +14,25 @@ export default function Redirect () {
 		width: '160px',
 		cursor: 'pointer'
 	};	
+	const textStyle = {
+		textAlign: 'center'
+	}
+	const cardImageStyle = {
+		padding: '30px 60px 30px 60px'
+	}
     return (
     	<div class="row">
 	    	<div class="col-sm-5">
-		        <div id="err" class="jumbotron">
-		        	<img style={svgStyle} src="../alert.svg" alt=""/>
-		            <h3 style={style}>Oops! 404</h3>
-					<button onClick={e => handleClick(e)} 
-						style={buttonStyle} 
-						type="button" 
-						class="btn btn-danger">Home</button>	
-		        </div>
+	    		<div class="card" style="width: 20rem;">
+					<img style={cardImageStyle} class="card-img-top" src="../issue-opened.svg" alt="Card image cap"/>
+					<div class="card-body">
+				    	<h4 class="card-title" style={textStyle}>404</h4>
+							<button onClick={e => handleClick(e)} 
+								style={buttonStyle} 
+								type="button" 
+								class="btn btn-danger">Home</button>	
+					</div>
+				</div>
 		    </div>
 		</div>
     )

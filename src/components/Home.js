@@ -32,20 +32,26 @@ export default function Home () {
 		marginTop: '30px',
 		textAlign: 'center'
 	}
+
     return (
     	<div class="row">
     		<div class="col-sm-5">
-    			<div class="jumbotron">
-    				<div style={inner}>
-    					<img style={github} height="200" width="200" src="./github.svg" alt=""/>
-			            <h5 style={githubText}> Enter a GitHub Username</h5>
-			            <input type="search"
-			            	placeholder="e.g. Diogenis"
-			            	onSearch={e => search(e.target.value, e)}
-			            	style={searchBox}
-			            	/>
-	    			</div>
-	    		</div>
+				<div class="card bg-light mb-3" style="max-width: 20rem;">
+				  	<div class="card-header">
+				  		<img src="../github.svg" height="25" width="25" alt=""/>
+				  	</div>
+				  	<div class="card-body">
+				    	<h4 class="card-title">Enter a Github Username</h4>
+					    	<div class="input-group">
+					      		<span class="input-group-addon" id="basic-addon1">@</span>
+				            	<input type="search"
+				            		placeholder="Diogenis..."
+				            		onSearch={e => search(e.target.value, e)}
+				            		style={searchBox}
+				            		/>
+						    </div>
+				  	</div>
+				</div>
 	    	</div>
 	    </div>
     );

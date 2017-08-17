@@ -16,6 +16,7 @@ export class Profile extends Component {
         fetch(`https://api.github.com/users/${this.props.user}`)
         	.then(resp => resp.json())
         	.then(user => {
+        		console.log(user)
         		this.setState({
         			user,
         			loading: false
